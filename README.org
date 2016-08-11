@@ -1,26 +1,32 @@
 #+TITLE: parinfer-mode
 #+AUTHOR: Edward Paget
 
-This package provides a [[http://shaunlebron.github.io/parinfer/index.html][parinfer]] mode for Emacs
+This package provides a [[http://shaunlebron.github.io/parinfer/index.html][Parinfer]] mode for Emacs.
+
+* Installation
+
+1. Clone this repo.
+2. Add the path to the project folder to your load path by adding
+     =(add-to-list 'load-path "<project-folder>")= to your =init.el=.
+3. Add =(require 'parinfer-mode)= to your =init.el=.
+4. Restart Emacs.
+
+Optionally, you can make =parinfer-mode= be enabled by default in =clojure-mode=
+by adding
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'clojure-mode-hook 'parinfer-mode)
+#+END_SRC
+
+to your =init.el=.
 
 * Usage
 
-- Clone this repo
-- Add the path to the project folder to your load path by adding
-    =(add-to-list 'load-path "<project-folder>")= to your =init.el=
-- Add =(require 'parinfer-mode)= to your =init.el=
-- Restart emacs and run =M-x parinfer-mode= to activate it for a buffer
-
-Optionally you can make =parinfer-mode= enabled by default in =clojure-mode= by
-adding
-
-    =(add-hook 'clojure-mode-hook 'parinfer-mode)=
-
-to your =init.el= .
+Run =M-x parinfer-mode= to activate it for a buffer.
 
 * Contributing
 
-Send me a Pull Request. I'll add you as a Collaborator!
+Send me a Pull Request. I’ll add you as a Collaborator!
 
 * Authors
 
@@ -29,4 +35,4 @@ Send me a Pull Request. I'll add you as a Collaborator!
 
 * License
 
-Licensed under the GPLv3. See LICENSE for Details
+Licensed under the GPLv3. See LICENSE for details.
